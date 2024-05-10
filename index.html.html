@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oshigambo High School</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #3897f0;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #fafafa;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #3897f0;
+            text-decoration: none;
+            padding: 0 15px;
+            font-weight: bold;
+        }
+        section {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .chat-room {
+            display: none;
+        }
+        .chat-room h3 {
+            margin-top: 0;
+        }
+        .form-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-container input {
+            padding: 8px 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            padding: 8px 20px;
+            background-color: #3897f0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Oshigambo High School</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('notice')">Notice Board</a>
+        <a href="#" onclick="showSection('chat')">Chat Room</a>
+    </nav>
+    <div class="container">
+        <section id="home">
+            <h2>Home</h2>
+            <p>Here you can find information and pictures about Oshigambo High School:</p>
+            <!-- Include content from Google and other sources -->
+            <p>Placeholder for images and information</p>
+        </section>
+        <section id="notice">
+            <h2>Notice Board</h2>
+            <div id="notice-updates">
+                <!-- Updates and information will be displayed here -->
+            </div>
+        </section>
+        <section id="chat" class="chat-room">
+            <h2>Chat Room</h2>
+            <div id="public-chat" class="chat">
+                <h3>Public Chat</h3>
+                <div id="public-chat-messages"></div>
+                <input type="text" placeholder="Your message" id="public-message">
+                <input type="button" value="Send" onclick="sendPublicMessage()">
+            </div>
+            <div id="private-chat" class="chat">
+                <h3>Private Chat</h3>
+                <div id="private-chat-messages"></div>
+                <input type="text" placeholder="Recipient" id="private-recipient">
+                <input type="text" placeholder="Your message" id="private-message">
+                <input type="button" value="Send" onclick="sendPrivateMessage()">
+            </div>
+        </section>
+    </div>
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="form-container">
+                <input type="text" placeholder="Username" id="username">
+                <input type="password" placeholder="Password" id="password">
+                <button onclick="signIn()">Sign In</button>
+                <button onclick="signUp()">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("login-modal");
+        const span = document.getElementsByClassName("close")[0];
+
+        function openModal() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function signIn() {
+            const username = document.getElementById
+
+
+
+
+
+
